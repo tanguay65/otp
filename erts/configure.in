@@ -1810,7 +1810,9 @@ case $host_os in
 		AC_CHECK_FUNCS([sendfile])
 		;;
 	solaris*)
-		AC_SEARCH_LIBS(sendfile, sendfile, AC_DEFINE(HAVE_SENDFILE, 1))
+		dnl AC_SEARCH_LIBS(sendfile, sendfile, AC_DEFINE(HAVE_SENDFILE, 1))
+		AC_SEARCH_LIBS(sendfile, sendfile)
+		;;
 		;;
 	*)
 		;;
